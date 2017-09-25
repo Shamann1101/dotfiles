@@ -71,7 +71,7 @@ function ToggleLines()
 endfunction
 nnoremap <F4> :call ToggleLines()<CR>
 set number
-set relativenumber
+"set relativenumber
 
 " mouse control toggle define
 nnoremap <F3> :call ToggleMouse()<CR>

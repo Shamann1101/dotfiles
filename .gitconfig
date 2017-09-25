@@ -13,8 +13,8 @@
     ui = auto
 
 [user]
-    name = Evgeniy Vasilev
-    email = github+dev@johnynsk.ru
+    name = Alexey Terentyev
+    email = alexey@terentyev.pro
 
 [core]
     excludesfile = ~/.config/git/gitignore
