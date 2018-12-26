@@ -9,9 +9,20 @@ sudo bash -c 'echo "deb https://apt.dockerproject.org/repo debian-jessie main" >
 sudo apt-get update
 sudo apt-cache policy docker-engine
 sudo apt-get -y install docker-engine
+# Переносим директорию загруженных образов в /opt/docker
+sudo service docker stop
+if [ -d "/var/lib/docker" ]; then
+  if [ ! -L "/var/lib/docker" ]; then
+    sudo mv /var/lib/docker /opt/docker
+  fi
+  else
+  sudo mkdir /opt/docker
+fi
+sudo ln -s /opt/docker /var/lib/docker
 sudo service docker start
-sudo usermod -a -G docker ${USER}
+# Снимаем блокировку паролем
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
 sudo bash -c "curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
 sudo chmod +x /usr/local/bin/docker-compose
-
