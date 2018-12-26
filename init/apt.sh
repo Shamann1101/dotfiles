@@ -12,4 +12,4 @@ sudo apt-get -y install \
     make \
     libx11-dev \
     autoconf \
-
+    mc \

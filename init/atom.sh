@@ -1,3 +1,5 @@
+#! /bin/bash
+
 installed=`which atom`
 if [[ -z ${installed} ]]
 then

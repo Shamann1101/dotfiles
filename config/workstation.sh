@@ -6,9 +6,9 @@ LINKPATHS=(
     ".vimrc"
     ".i3"
     ".config/git"
-    ".config/jirabranch"
+#    ".config/jirabranch"
     ".keynavrc"
-    ".xsessionrc"
+#    ".xsessionrc"
 )
 
 EXECPATHS=(
@@ -18,5 +18,7 @@ EXECPATHS=(
     "screen-record.sh"
     "i3.sh"
     "keynav.sh"
+    "docker.sh"
+    "golang.sh"
 )
 

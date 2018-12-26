@@ -5,7 +5,7 @@ LINKPATHS=(
     ".vim"
     ".vimrc"
     ".config/git"
-    ".config/jirabranch"
+#    ".config/jirabranch"
 )
 
 EXECPATHS=(
